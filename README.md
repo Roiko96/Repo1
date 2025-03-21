@@ -28,3 +28,4 @@ print(budget_data.balance)        # Expected output: 600
 print(budget_data.transactions)
 ```
 # enjoyy
+
