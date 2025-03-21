@@ -1,31 +1,30 @@
 # Budget Manager
+**short description:**  
+a simple and convenient budget management script that allows tracking the balance,
+adding transactions (income and expenses), and automatically updating the balance.
 
-תיאור קצר:  
-סקריפט ניהול תקציב פשוט ונוח, המאפשר מעקב אחרי יתרה, הוספת עסקאות (הכנסות והוצאות) ועדכון אוטומטי של היתרה.
+## Features
+- **Budget Management**: Track your financial balance.
+- **Transaction Management**: Add income and expense transactions.
+- **Dynamic Updates**: Automatically calculate the balance after each transaction.
 
-## תכונות
-- **ניהול תקציב**: מעקב אחרי יתרה עסקית.
-- **ניהול עסקאות**: הוספת הכנסות והוצאות.
-- **עדכון דינמי**: חישוב אוטומטי של היתרה לאחר כל עסקה.
+## Usage
+1. **Create a Budget Object**  
+   Initialize the budget with a starting balance and, optionally, existing transactions.
+2. **Add a Transaction**  
+   Use the `add_transaction` function to add a new transaction and adjust the balance based on the transaction type (income/expense).
 
-## שימוש
-1. **יצירת אובייקט Budget**  
-   אתחלו את התקציב עם יתרה התחלתית ועסקאות קיימות, במידת הצורך.
-
-2. **הוספת עסקה**  
-   השתמשו בפונקציה `add_transaction` להוספת עסקה חדשה ולהתאמת היתרה בהתאם לסוג העסקה (income/expense).
-
-### דוגמה לשימוש:
-```python
-# אתחול התקציב עם יתרה התחלתית ועסקאות קיימות
+### Example:
+```python      
+# Initialize the budget with a starting balance and existing transactions
 budget_data = Budget(balance=300, transactions=[
     {"type": "income", "amount": 1000, "description": "Salary"},
     {"type": "expense", "amount": 500, "description": "Rent"}
 ])
-
-# הוספת עסקה חדשה
+# Add a new transaction
 budget_data.add_transaction("expense", 200, "Groceries")
-
-# הצגת היתרה והעסקאות
-print(budget_data.balance)        # פלט צפוי: 600
+# Display the balance and transactions
+print(budget_data.balance)        # Expected output: 600
 print(budget_data.transactions)
+```
+# enjoyy
